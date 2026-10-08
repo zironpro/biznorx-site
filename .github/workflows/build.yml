@@ -1,0 +1,43 @@
+# Every push to main is built here on GitHub, not on the VPS.
+# The finished site goes to the `deploy` branch; Dokploy watches that branch and only has to start Nginx.
+name: Build & publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: publish
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run build
+
+      - name: Publish the built site to the deploy branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p /tmp/deploy/site
+          cp -R out/. /tmp/deploy/site/
+          cp deploy/nginx.conf /tmp/deploy/nginx.conf
+          cp deploy/Dockerfile.serve /tmp/deploy/Dockerfile
+          cd /tmp/deploy
+          git init -q -b deploy
+          git add -A
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+            commit -q -m "Site build from ${GITHUB_SHA::7}"
+          # One commit, replaced each time, so the branch never grows
+          git push -q -f "https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" deploy

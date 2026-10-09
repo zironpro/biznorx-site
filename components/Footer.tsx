@@ -26,7 +26,7 @@ function Statement({ path }: { path: string }) {
   return (
     <>
       <h3>Hiring in the UAE?<br /><span className="serif grad-text">We’ll find your people.</span></h3>
-      <div className="hero-actions"><Link href="/#request" className="btn btn-red">Request staff <Arrow /></Link><Link href="/careers/#apply" className="btn btn-ghost">Submit your CV</Link></div>
+      <div className="hero-actions"><Link href="/#request" className="btn btn-red">Start hiring <Arrow /></Link><Link href="/careers/#apply" className="btn btn-ghost">Submit your CV</Link></div>
     </>
   );
 }
@@ -47,7 +47,7 @@ export function Footer() {
             <div>
               <h4>Employers</h4>
               <ul>
-                <li><Link href="/#request">Request staff</Link></li>
+                <li><Link href="/#request">Start hiring</Link></li>
                 <li><Link href="/people/">Recruitment services</Link></li>
                 <li><Link href="/people/#executive">Executive search</Link></li>
                 <li><Link href="/people/#manpower">Skilled manpower</Link></li>

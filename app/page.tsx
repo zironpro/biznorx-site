@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Supply } from "@/components/Supply";
 import type { Metadata } from "next";
+import { PressBadge, PressFeature } from "@/components/Press";
 
 export const metadata: Metadata = {
   title: { absolute: "BiznorX | Recruitment & Manpower Agency in the UAE" },
@@ -21,7 +22,7 @@ export default function HomePage() {
                 <h1 className="words reveal">The right people for <span className="serif">every role</span> in your business.</h1>
                 <p className="lead reveal d2">From finance managers to forklift operators — BiznorX sources, screens and delivers professionals and skilled manpower for companies across the UAE, with visas, documentation and onboarding support.</p>
                 <div className="hero-actions reveal d3">
-                  <a href="#request" className="btn btn-red hide-lg">Request staff <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+                  <a href="#request" className="btn btn-red hide-lg">Start hiring <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
                   <Link href="/careers/#apply" className="btn btn-glass"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12" /></svg> Looking for a job? Submit CV</Link>
                 </div>
                 <ul className="hero-points reveal d4">
@@ -29,6 +30,7 @@ export default function HomePage() {
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg> Every level &amp; trade</li>
                   <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5" /></svg> Single hires to bulk teams</li>
                 </ul>
+                <div className="reveal d4"><PressBadge /></div>
               </div>
 
               <form className="hero-form reveal d2" id="request" data-whatsapp>
@@ -100,7 +102,7 @@ export default function HomePage() {
               <span className="eyebrow reveal">How it works</span>
               <h2 className="reveal d1">From requirement to<br /><span className="serif">first day at work.</span></h2>
             </div>
-            <a href="#request" className="btn btn-red reveal d2">Request staff <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
+            <a href="#request" className="btn btn-red reveal d2">Start hiring <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
           </div>
           <div className="steps steps-light">
             <div className="step reveal"><div className="dot">01</div><h3>Share your requirement</h3><p>Tell us the roles, headcount, salary range and start date. A consultant confirms the brief with you.</p></div>
@@ -139,6 +141,7 @@ export default function HomePage() {
             </div>
           </div>
         </div>
+        <div className="container" style={{ marginTop: 70 }}><PressFeature /></div>
       </section>
 
       <section className="section tint">
@@ -216,7 +219,7 @@ export default function HomePage() {
               <p>Professionals or skilled manpower, one hire or a full team — share your requirement and we’ll send matched candidates.</p>
             </div>
             <div className="cta-actions">
-              <Link href="/#request" className="btn btn-light">Request staff <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>
+              <Link href="/#request" className="btn btn-light">Start hiring <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>
               <Link href="/careers/#apply" className="btn btn-outline-light">Looking for a job? Upload your CV</Link>
             </div>
           </div>

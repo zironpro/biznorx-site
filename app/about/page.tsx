@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { PressFeature } from "@/components/Press";
 
 export const metadata: Metadata = {
   title: { absolute: "About BiznorX | Recruitment & Manpower Company in Dubai, UAE" },
@@ -20,7 +21,7 @@ export default function AboutPage() {
             <h1 className="words reveal d1">Connecting UAE businesses with <span className="serif">the right people.</span></h1>
             <p className="lead reveal d2" style={{ marginTop: "24px" }}>BiznorX is a Dubai-based recruitment and workforce company. We help organisations build capable teams — from senior professionals to skilled site crews — while creating meaningful opportunities for the people we place.</p>
             <div className="hero-actions reveal d3" style={{ marginTop: "34px" }}>
-              <Link href="/#request" className="btn btn-red">Request staff <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>
+              <Link href="/#request" className="btn btn-red">Start hiring <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>
               <Link href="/careers/#apply" className="btn btn-ghost">Submit your CV</Link>
             </div>
           </div>
@@ -109,6 +110,10 @@ export default function AboutPage() {
       </section>
 
       <section className="section-sm">
+        <div className="container"><PressFeature /></div>
+      </section>
+
+      <section className="section-sm">
         <div className="container">
           <div className="cta-block reveal">
             <div>
@@ -117,7 +122,7 @@ export default function AboutPage() {
               <p>Professionals or skilled manpower, one hire or a full team — share your requirement and we’ll send matched candidates.</p>
             </div>
             <div className="cta-actions">
-              <Link href="/#request" className="btn btn-light">Request staff <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>
+              <Link href="/#request" className="btn btn-light">Start hiring <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>
               <Link href="/careers/#apply" className="btn btn-outline-light">Looking for a job? Upload your CV</Link>
             </div>
           </div>

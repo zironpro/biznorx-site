@@ -42,7 +42,7 @@ export function Header() {
             <Link href={divisions.realty.href} aria-label={divisions.realty.name} {...active(divisions.realty.href)}><DivisionLockup tag="Realty" /></Link>
             <Link href={divisions.tech.href} aria-label={divisions.tech.name} {...active(divisions.tech.href)}><DivisionLockup tag="Tech" /></Link>
           </div>
-          <Link href="/#request" className="btn btn-red">Request staff <Arrow /></Link>
+          <Link href="/#request" className="btn btn-red">Start hiring <Arrow /></Link>
           <button className="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span></button>
         </div>
       </div>

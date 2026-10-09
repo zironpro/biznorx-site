@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { PressFeature } from "@/components/Press";
 
 export const metadata: Metadata = {
   title: { absolute: "Meet Alix | BiznorX Hiring Intelligence" },
@@ -77,6 +78,10 @@ export default function AlixPage() {
       </section>
 
       <section className="section-sm">
+        <div className="container"><PressFeature /></div>
+      </section>
+
+      <section className="section-sm">
         <div className="container">
           <div className="cta-block reveal">
             <div>
@@ -85,7 +90,7 @@ export default function AlixPage() {
               <p>Professionals or skilled manpower, one hire or a full team — share your requirement and we’ll send matched candidates.</p>
             </div>
             <div className="cta-actions">
-              <Link href="/#request" className="btn btn-light">Request staff <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>
+              <Link href="/#request" className="btn btn-light">Start hiring <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" /></svg></Link>
               <Link href="/careers/#apply" className="btn btn-outline-light">Looking for a job? Upload your CV</Link>
             </div>
           </div>

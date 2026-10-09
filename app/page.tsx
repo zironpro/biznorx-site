@@ -126,7 +126,7 @@ export default function HomePage() {
           <div className="match reveal d1" data-alix-demo>
             <div className="match-card">
               <div className="match-top">
-                <span className="tag"><img src="/images/mark.png" alt="" />Alix · Smart Matching</span>
+                <span className="tag"><img src="/images/mark.svg" alt="" />Alix · Smart Matching</span>
                 <span className="live">Live demo</span>
               </div>
               <div className="role">

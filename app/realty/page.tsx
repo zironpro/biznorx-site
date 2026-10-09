@@ -12,7 +12,7 @@ export default function RealtyPage() {
       <section className="rx-hero">
         <img src="/images/mumbai-marine-drive.jpg" alt="Marine Drive, Mumbai, at dusk" fetchPriority="high" className="rx-hero-bg" />
         <div className="container rx-hero-inner">
-          <div className="meta-line reveal"><img src="/images/mark-white.png" alt="" /><span>BiznorX Realty</span><i></i><span>Mumbai</span></div>
+          <div className="meta-line reveal"><img src="/images/mark-white.svg" alt="" /><span>BiznorX Realty</span><i></i><span>Mumbai</span></div>
           <h1 className="words reveal">Your address in Mumbai, <span className="serif">chosen with care.</span></h1>
           <p className="lead reveal d2">Homes, offices and land across Mumbai and the MMR — sourced, verified and secured by a team on the ground, for buyers here and NRIs across the Gulf.</p>
 

@@ -45,13 +45,13 @@ export function Intro() {
     <div className={`intro${closing ? " is-closing" : ""}`} role="dialog" aria-modal="true" aria-label="Choose a BiznorX division">
       <div className="intro-bg" aria-hidden="true" />
       <div className="intro-loader" aria-hidden="true">
-        <img src="/images/mark-white.png" alt="" className="intro-mark" />
+        <img src="/images/mark-white.svg" alt="" className="intro-mark" />
         <span className="intro-bar"><i /></span>
       </div>
 
       <div className="intro-content">
         <div className="intro-head">
-          <img src="/images/logo-white.png" alt="BiznorX" className="intro-brand" width="180" height="34" />
+          <img src="/images/logo-white.svg" alt="BiznorX" className="intro-brand" width="186" height="34" />
           <p>Welcome. <span className="serif">Where would you like to go?</span></p>
         </div>
         <div className="intro-choices">
@@ -61,7 +61,7 @@ export function Intro() {
                 <img src={c.image} alt="" />
                 <span className="ic-body">
                   <span className="lockup">
-                    <span className="lockup-logo"><img src="/images/logo-white.png" alt="" width="96" height="18" /></span>
+                    <span className="lockup-logo"><img src="/images/logo-white.svg" alt="" width="98" height="18" /></span>
                     <span className="lockup-tag">{c.tag}</span>
                   </span>
                   <b>{c.title}</b>

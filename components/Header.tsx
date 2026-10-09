@@ -11,8 +11,8 @@ function DivisionLockup({ tag, note }: { tag: string; note?: string }) {
   return (
     <span className="lockup">
       <span className="lockup-logo">
-        <img src="/images/logo.png" alt="" className="on-light" width="96" height="18" />
-        <img src="/images/logo-white.png" alt="" className="on-dark" width="96" height="18" />
+        <img src="/images/logo.svg" alt="" className="on-light" width="98" height="18" />
+        <img src="/images/logo-white.svg" alt="" className="on-dark" width="98" height="18" />
       </span>
       <span className="lockup-tag">{tag}</span>
       {note && <span className="lockup-note">{note}</span>}
@@ -28,7 +28,7 @@ export function Header() {
   return (
     <header className="header" id="header">
       <div className="container">
-        <Link href="/" className="logo" aria-label="BiznorX home"><img src="/images/logo.png" alt="BiznorX" width="183" height="34" /></Link>
+        <Link href="/" className="logo" aria-label="BiznorX home"><img src="/images/logo.svg" alt="BiznorX" width="186" height="34" /></Link>
         <nav className="nav" id="nav" aria-label="Main">
           {nav.map((n) => <Link key={n.href} href={n.href} {...active(n.href)}>{n.label}</Link>)}
           <div className="nav-divisions">

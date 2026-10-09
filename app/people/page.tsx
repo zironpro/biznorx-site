@@ -16,7 +16,7 @@ export default function PeoplePage() {
         <div className="container hero-grid">
           <div>
             <div className="crumbs reveal"><Link href="/">BiznorX Group</Link><span>/</span>People</div>
-            <span className="div-lockup reveal"><img src="/images/mark.png" alt="" />BiznorX <b>People</b><small>UAE &amp; GCC</small></span>
+            <span className="div-lockup reveal"><img src="/images/mark.svg" alt="" />BiznorX <b>People</b><small>UAE &amp; GCC</small></span>
             <h1 className="reveal d1">
               <span className="line">Hire people who</span>
               <span className="line">move your business</span>
@@ -39,7 +39,7 @@ export default function PeoplePage() {
             <span className="market-pill">UAE &amp; GCC</span>
             <div className="match-card">
               <div className="match-top">
-                <span className="tag"><img src="/images/mark.png" alt="" />Alix · Smart Matching</span>
+                <span className="tag"><img src="/images/mark.svg" alt="" />Alix · Smart Matching</span>
                 <span className="live">Live demo</span>
               </div>
               <div className="role">

@@ -16,7 +16,7 @@ export default function TechPage() {
         <div className="container hero-grid">
           <div>
             <div className="crumbs reveal"><Link href="/">BiznorX Group</Link><span>/</span>Tech</div>
-            <span className="div-lockup reveal"><img src="/images/mark.png" alt="" />BiznorX <b>Tech</b><small>Worldwide</small></span>
+            <span className="div-lockup reveal"><img src="/images/mark.svg" alt="" />BiznorX <b>Tech</b><small>Worldwide</small></span>
             <h1 className="reveal d1">Digital that moves<br />your business <span className="serif">forward.</span></h1>
             <p className="lead reveal d2">From our UAE base, BiznorX Tech builds, markets and automates digital experiences for clients worldwide — high-performance websites and apps, SEO, branding and AI-powered workflows.</p>
             <div className="hero-actions reveal d3">
@@ -28,7 +28,7 @@ export default function TechPage() {
             <div className="ph"><img src="/images/tech-code.jpg" alt="Code on screens in a dark workspace" fetchPriority="high" /></div>
             <span className="market-pill">Worldwide</span>
             <div className="match-card">
-              <div className="match-top"><span className="tag"><img src="/images/mark.png" alt="" />BiznorX Tech · Delivery</span><span className="live">In progress</span></div>
+              <div className="match-top"><span className="tag"><img src="/images/mark.svg" alt="" />BiznorX Tech · Delivery</span><span className="live">In progress</span></div>
               <div className="role"><small>Project</small><h4>Website + app + growth</h4><div className="chips"><span className="chip">Next.js</span><span className="chip">React Native</span><span className="chip">SEO</span></div></div>
               <div className="cands">
                 <div className="cand top"><span className="avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10" /><circle cx="12" cy="12" r="6" /><circle cx="12" cy="12" r="2" /></svg></span><div><b>Strategy</b><span>Audit &amp; roadmap</span></div><div className="score"><b>✓</b></div></div>

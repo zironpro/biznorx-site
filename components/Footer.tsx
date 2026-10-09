@@ -40,7 +40,7 @@ export function Footer() {
           <div className="footer-statement"><Statement path={path} /></div>
           <div className="footer-grid">
             <div className="footer-about">
-              <Link href="/" className="logo"><img src="/images/logo.png" alt="BiznorX" width="194" height="36" /></Link>
+              <Link href="/" className="logo"><img src="/images/logo.svg" alt="BiznorX" width="197" height="36" /></Link>
               <p>Dubai-based recruitment and manpower for UAE businesses — professionals and skilled workforce. Part of the BiznorX group with BiznorX Realty (Mumbai) and BiznorX Tech.</p>
               <span className="status" data-status>Dubai HQ</span>
             </div>

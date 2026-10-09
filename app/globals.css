@@ -1095,3 +1095,68 @@ h1 .serif, .photo-hero h1 .serif { background-size: 220% 100%; animation: shimme
   .pf-side, .pf-main { padding: 26px; }
   .pf-outlet { font-size: 1.6rem; }
 }
+
+/* ===== First-visit intro (homepage) ===== */
+.intro { position: fixed; inset: 0; z-index: 200; display: grid; place-items: center; color: #fff; overflow: hidden; isolation: isolate; transition: opacity .7s var(--ease), visibility .7s; }
+html.intro-seen .intro { display: none; }
+body.intro-open { overflow: hidden; }
+body.intro-open .wa, body.intro-open .progress { display: none; }
+.intro.is-closing { opacity: 0; visibility: hidden; }
+.intro.is-closing .intro-content { transform: scale(1.03); }
+.intro-bg { position: absolute; inset: 0; z-index: -1; background: radial-gradient(1200px 700px at 15% 0%, rgba(223, 16, 34, .28), transparent 60%), radial-gradient(900px 600px at 100% 100%, rgba(10, 42, 87, .9), transparent 60%), #010F24; }
+.intro-bg::after { content: ""; position: absolute; inset: 0; opacity: .5;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Cpath d='M24 20l12 12-12 12' fill='none' stroke='%23fff' stroke-opacity='.05' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  -webkit-mask-image: radial-gradient(ellipse at center, #000 20%, transparent 75%); mask-image: radial-gradient(ellipse at center, #000 20%, transparent 75%); }
+
+/* 1) loading moment */
+.intro-loader { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; animation: introOut .6s var(--ease) 1.25s forwards; pointer-events: none; }
+.intro-mark { height: 64px; opacity: 0; transform: translateX(-24px) scale(.9); animation: markIn .7s var(--ease) .1s forwards; }
+.intro-bar { width: 160px; height: 2px; border-radius: 2px; background: rgba(255, 255, 255, .12); overflow: hidden; }
+.intro-bar i { display: block; height: 100%; width: 100%; background: linear-gradient(90deg, #DF1022, #FF6B75); transform-origin: left; transform: scaleX(0); animation: barFill 1.1s cubic-bezier(.6, 0, .2, 1) .15s forwards; }
+@keyframes markIn { to { opacity: 1; transform: none; } }
+@keyframes barFill { to { transform: scaleX(1); } }
+@keyframes introOut { to { opacity: 0; transform: scale(.94); visibility: hidden; } }
+
+/* 2) choices */
+.intro-content { width: min(1240px, 100% - 48px); display: flex; flex-direction: column; gap: 34px; transition: transform .7s var(--ease); }
+.intro-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 20px; flex-wrap: wrap; opacity: 0; animation: fadeUp .8s var(--ease) 1.4s forwards; }
+.intro-brand { height: 34px; width: auto; }
+.intro-head p { font: 600 clamp(1.4rem, 2.6vw, 2.1rem)/1.15 var(--font-display); letter-spacing: -.035em; color: #fff; }
+.intro-head .serif { font-weight: 400; color: #FF8A93; }
+.intro-choices { display: flex; gap: 14px; height: min(62vh, 560px); }
+.intro-choice { position: relative; flex: 1; border: 0; padding: 0; border-radius: 24px; overflow: hidden; cursor: pointer; text-align: left; color: #fff; isolation: isolate; opacity: 0; transform: translateY(40px); animation: fadeUp .9s var(--ease) forwards; transition: flex .8s var(--ease), box-shadow .5s; font: inherit; outline-offset: 4px; }
+.intro-choice > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transform: scale(1.08); transition: transform 1.2s var(--ease), filter .6s; filter: saturate(.8) brightness(.8); }
+.intro-choice::before { content: ""; position: absolute; inset: 0; z-index: -1; background: linear-gradient(0deg, rgba(1, 15, 36, .95) 8%, rgba(1, 15, 36, .35) 60%, rgba(1, 15, 36, .2) 100%); transition: background .6s; }
+.intro-choice::after { content: ""; position: absolute; inset: 0; border-radius: inherit; border: 1px solid rgba(255, 255, 255, .14); pointer-events: none; transition: border-color .4s; }
+.intro-choices:hover .intro-choice { flex: .85; }
+.intro-choices .intro-choice:hover, .intro-choice:focus-visible { flex: 1.5; box-shadow: 0 40px 80px -30px rgba(223, 16, 34, .5); }
+.intro-choice:hover > img, .intro-choice:focus-visible > img { transform: scale(1); filter: saturate(1) brightness(.95); }
+.intro-choice:hover::after { border-color: rgba(255, 107, 117, .6); }
+.ic-body { position: absolute; left: 0; right: 0; bottom: 0; padding: 30px; display: flex; flex-direction: column; gap: 8px; }
+.intro-choice .lockup-logo img { height: 22px; }
+.intro-choice .lockup-tag { color: #FF8A93; font-size: .68rem; margin-top: 7px; }
+.ic-body b { font: 600 clamp(1.3rem, 2vw, 1.75rem) var(--font-display); letter-spacing: -.035em; margin-top: 14px; }
+.ic-body small { font-size: .92rem; color: rgba(255, 255, 255, .75); max-width: 300px; line-height: 1.5; }
+.ic-go { display: inline-flex; align-items: center; gap: 8px; margin-top: 12px; align-self: flex-start; padding: 10px 16px; border-radius: 999px; background: rgba(255, 255, 255, .12); border: 1px solid rgba(255, 255, 255, .22); font: 600 .86rem var(--font-sans); backdrop-filter: blur(8px); transition: background .35s, color .35s; }
+.ic-go svg { width: 14px; height: 14px; }
+.intro-choice:hover .ic-go, .intro-choice:focus-visible .ic-go { background: #fff; color: var(--navy); }
+.intro-skip { align-self: center; border: 0; background: none; color: rgba(255, 255, 255, .6); font: 500 .9rem var(--font-sans); cursor: pointer; text-decoration: underline; text-underline-offset: 4px; opacity: 0; animation: fadeUp .8s var(--ease) 2s forwards; }
+.intro-skip:hover { color: #fff; }
+@keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+@media (max-width: 860px) {
+  .intro { place-items: start center; overflow-y: auto; padding: 28px 0; }
+  .intro-content { gap: 22px; }
+  .intro-head { flex-direction: column; align-items: flex-start; }
+  .intro-brand { height: 28px; }
+  .intro-choices { flex-direction: column; height: auto; }
+  .intro-choice, .intro-choices:hover .intro-choice, .intro-choices .intro-choice:hover { flex: none; height: 25vh; min-height: 170px; }
+  .ic-body { padding: 20px 112px 20px 20px; gap: 4px; }
+  .ic-body b { margin-top: 8px; font-size: 1.25rem; }
+  .ic-body small { display: none; }
+  .ic-go { position: absolute; right: 18px; bottom: 18px; margin: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .intro-loader { display: none; }
+  .intro-head, .intro-choice, .intro-skip { animation: none; opacity: 1; transform: none; }
+}

@@ -36,7 +36,11 @@ export const viewport: Viewport = { themeColor: "#021A3B" };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-AE" className={`${display.variable} ${sans.variable} ${serif.variable}`}>
+    <html lang="en-AE" className={`${display.variable} ${sans.variable} ${serif.variable}`} suppressHydrationWarning>
+      <head>
+        {/* Hide the homepage intro before first paint if this visitor has already seen it (see components/Intro.tsx) */}
+        <script dangerouslySetInnerHTML={{ __html: "try{if(sessionStorage.getItem('bx-intro-seen'))document.documentElement.classList.add('intro-seen')}catch(e){}" }} />
+      </head>
       <body>
         <Header />
         <main id="main">{children}</main>

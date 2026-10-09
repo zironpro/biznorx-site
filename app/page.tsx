@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { Intro } from "@/components/Intro";
 import { Supply } from "@/components/Supply";
 import type { Metadata } from "next";
 import { PressBadge, PressFeature } from "@/components/Press";
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function HomePage() {
   return (
     <>
+      <Intro />
       <section className="photo-hero">
         <div className="frame on-photo">
           <img src="/images/dubai-sunset.jpg" alt="Dubai skyline at sunset" fetchPriority="high" />

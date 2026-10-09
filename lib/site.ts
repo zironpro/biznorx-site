@@ -6,7 +6,9 @@ const digits = (n: string) => n.replace(/\D/g, "");
 
 export const site = {
   name: "BiznorX",
-  url: "https://biznorx.com",
+  // Preview address for now. At launch: set url to "https://biznorx.com" and live to true (lets Google index the site).
+  url: "https://biznorx.zironpro.com",
+  live: false,
   email: contact.email,
   dubai: contact.dubai,
   mumbai: contact.mumbai,

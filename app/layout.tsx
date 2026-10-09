@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: "BiznorX | Recruitment & Manpower Agency in the UAE", template: "%s | BiznorX" },
   description,
-  robots: { index: true, follow: true, "max-image-preview": "large" },
+  robots: site.live ? { index: true, follow: true, "max-image-preview": "large" } : { index: false, follow: false },
   icons: { icon: [{ url: "/images/favicon.svg", type: "image/svg+xml" }] },
   openGraph: {
     type: "website",
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     url: "/",
     title: "BiznorX — The right people for every role in your business",
     description,
-    images: [{ url: "/images/logo.svg", alt: "BiznorX logo" }],
+    images: [{ url: "/images/og.jpg", width: 1200, height: 630, alt: "BiznorX" }],
   },
   twitter: { card: "summary_large_image" },
   other: { "geo.region": "AE-DU", "geo.placename": "Dubai" },
